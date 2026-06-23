@@ -87,14 +87,35 @@ function renderIdeas(){buildView();let mode=$('viewSel').value; if(!view.length)
 function makeVoteUrl(d){
   let url=project.voteFormUrl||project.votesFormUrl||'';
   if(isPlaceholder(url))return'';
+  // Safety check: the Vote button must open a Google Form, not the published votes CSV.
+  // If a Sheets CSV link is pasted into voteFormUrl by mistake, do not open/download it.
+  if(/spreadsheets\/d\//i.test(url)||/output=csv/i.test(url)){
+    alert('The Vote button is currently pointing to a Google Sheet/CSV link. Put the pre-filled Google Vote Form link in voteFormUrl, and put the published votes CSV link in votesCsvUrl.');
+    return'';
+  }
   let pairs={
+    // Preferred lowercase placeholders
     ideaId:d.ideaId||'',
     ideaText:d.idea||'',
     idea:d.idea||'',
+    name:d.name||'',
+    team:d.team||'',
     category:d.category||'',
     subcategory:d.subcategory||'',
     project:project.id||'',
-    projectName:project.name||project.id||''
+    projectName:project.name||project.id||'',
+
+    // Friendly aliases, so older / capitalized prefill links also work
+    IdeaID:d.ideaId||'',
+    IdeaId:d.ideaId||'',
+    ID:d.ideaId||'',
+    Idea:d.idea||'',
+    Name:d.name||'',
+    Team:d.team||'',
+    Category:d.category||'',
+    Subcategory:d.subcategory||'',
+    Project:project.id||'',
+    ProjectName:project.name||project.id||''
   };
   Object.keys(pairs).forEach(k=>{
     let raw='{'+k+'}';
