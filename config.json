@@ -7,8 +7,8 @@
       "question": "MTR Feedback",
       "ideaFormUrl": "https://forms.gle/7JTXjZRnkW78pP4z7",
       "ideasCsvUrl": "https://docs.google.com/spreadsheets/d/e/2PACX-1vSh-S9rsiyUW1up-_0XzwqUej6vV8-uHl_bXDSyUiXJpVeyyKAapeD7MjnFWdLnh1DRmiIl54sbJ3xa/pub?output=csv",
-      "voteFormUrl": "PASTE_PREFILLED_VOTE_FORM_LINK_HERE",
-      "votesCsvUrl": "PASTE_PUBLISHED_VOTES_CSV_LINK_HERE",
+      "voteFormUrl": "https://docs.google.com/forms/d/e/1FAIpQLSd89WR89EBQu3WI5zdk3doKkEfBCeIvLs8brXdV03tjIfGYMQ/viewform?usp=publish-editor",
+      "votesCsvUrl": "#",
       "refreshSeconds": 30
     },
     {
@@ -27,8 +27,8 @@
       "question": "Efficiency and Effectiveness Suggestions",
       "ideaFormUrl": "https://forms.gle/EQqs5pnjWtAcLyA26",
       "ideasCsvUrl": "https://docs.google.com/spreadsheets/d/e/2PACX-1vTcgnyph1FVLWZVyA3nf9PHyyqgcHx-FfC2oh8HEm5fsnRDtLNLC31aiV3mx4DApv0eacxykMxkOeAG/pub?output=csv",
-      "voteFormUrl": "PASTE_PREFILLED_VOTE_FORM_LINK_HERE",
-      "votesCsvUrl": "PASTE_PUBLISHED_VOTES_CSV_LINK_HERE",
+      "voteFormUrl": "https://docs.google.com/forms/d/e/1FAIpQLSd89WR89EBQu3WI5zdk3doKkEfBCeIvLs8brXdV03tjIfGYMQ/viewform?usp=header",
+      "votesCsvUrl": "https://docs.google.com/spreadsheets/d/e/2PACX-1vSv44aLcCmW8q2K2ayPeGF2Iu9pUsCC2SWfbDNyHDOnxh7dpKNvrr8sF9jsTqLADi7-WcLpERaIQhAg/pub?output=csv",
       "refreshSeconds": 30
     },
     {
