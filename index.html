@@ -84,7 +84,29 @@ function chips(d, count){let st=getStatus(d);return `<div class="tagrow">${d.fea
 function lenCls(t){return t.length>220?'vlong':t.length>115?'long':''}
 function itemHTML(d, mode='idea'){let count=voteCounts()[ideaKey(d)]||0;let meta=`<div class="meta">${d.name?esc(d.name):'Anonymous'}${d.team?` · ${esc(d.team)}`:''}${d.ideaId?` · ${esc(d.ideaId)}`:''}</div>`;let actions=mode==='vote'?`<button class="votebtn" data-vote="${esc(ideaKey(d))}">Vote</button>`:`<button class="statusbtn" data-status="${esc(ideaKey(d))}">${statusLabel(nextStatus(getStatus(d)))}</button>`;return `<article class="item"><div class="card-top">${chips(d,count)}</div><div class="text">${esc(d.idea)}</div>${meta}<div class="actions">${actions}</div></article>`}
 function renderIdeas(){buildView();let mode=$('viewSel').value; if(!view.length){$('board').innerHTML=`<div class="empty"><h2>No ideas to show</h2><p>Try another filter, or check that the published ideas CSV has an Idea column.</p></div>`;return} if(mode==='cards'){let d=view[idx], count=voteCounts()[ideaKey(d)]||0;$('board').className='board cards';$('board').innerHTML=`<div class="deck"><article class="card"><div class="card-top">${chips(d,count)}<button class="statusbtn" data-status="${esc(ideaKey(d))}">${statusLabel(nextStatus(getStatus(d)))}</button></div><div class="text ${lenCls(d.idea)}">${esc(d.idea)}</div><div class="meta">${d.name?esc(d.name):'Anonymous'}${d.team?` · ${esc(d.team)}`:''}${d.ideaId?` · ${esc(d.ideaId)}`:''}</div></article></div><div class="nav"><button id="prevBtn">‹</button><div class="counter">${idx+1} / ${view.length}<small>cards</small></div><button id="nextBtn">›</button></div>`;$('prevBtn').onclick=()=>{if(idx>0){idx--;renderIdeas()}};$('nextBtn').onclick=()=>{if(idx<view.length-1){idx++;renderIdeas()}}} else {$('board').className='board '+mode;$('board').innerHTML=view.map(d=>itemHTML(d,'idea')).join('')}}
-function makeVoteUrl(d){let url=project.voteFormUrl||''; if(isPlaceholder(url))return'';let pairs={ideaId:d.ideaId||'',ideaText:d.idea||'',idea:d.idea||'',category:d.category||'',subcategory:d.subcategory||'',project:project.id||''};Object.keys(pairs).forEach(k=>{url=url.replaceAll('{'+k+'}',encodeURIComponent(pairs[k]))});return url}
+function makeVoteUrl(d){
+  let url=project.voteFormUrl||project.votesFormUrl||'';
+  if(isPlaceholder(url))return'';
+  let pairs={
+    ideaId:d.ideaId||'',
+    ideaText:d.idea||'',
+    idea:d.idea||'',
+    category:d.category||'',
+    subcategory:d.subcategory||'',
+    project:project.id||'',
+    projectName:project.name||project.id||''
+  };
+  Object.keys(pairs).forEach(k=>{
+    let raw='{'+k+'}';
+    let val=encodeURIComponent(pairs[k]);
+    // Google Forms prefilled links usually URL-encode the braces, so support both forms.
+    url=url.replaceAll(raw,val)
+           .replaceAll(encodeURIComponent(raw),val)
+           .replaceAll('%7B'+k+'%7D',val)
+           .replaceAll('%7b'+k+'%7d',val);
+  });
+  return url;
+}
 function renderVote(){buildView(); if(!view.length){$('board').className='board';$('board').innerHTML='<div class="empty"><h2>No ideas available for voting</h2><p>The Vote tab uses the same ideas CSV as the Ideas tab.</p></div>';return}$('board').className='board vote-list';$('board').innerHTML=view.map(d=>itemHTML(d,'vote')).join('')}
 function renderResults(){let counts=voteCounts();let rows=ideas.map(d=>({d,count:counts[ideaKey(d)]||0})).filter(x=>x.count>0).sort((a,b)=>b.count-a.count); if(!project.votesCsvUrl||isPlaceholder(project.votesCsvUrl)){$('board').className='board';$('board').innerHTML='<div class="empty"><h2>Results not set up yet</h2><p>Add a published votes CSV link in config.json as votesCsvUrl.</p></div>';return} if(!rows.length){$('board').className='board';$('board').innerHTML='<div class="empty"><h2>No votes yet</h2><p>Votes will appear here after the voting form receives responses and the votes CSV publishes.</p></div>';return}$('board').className='board results-list';$('board').innerHTML=rows.map((x,i)=>`<article class="item result-row"><div class="result-rank">#${i+1}</div><div><div class="text">${esc(x.d.idea)}</div>${chips(x.d,x.count)}<div class="meta">${x.d.ideaId?esc(x.d.ideaId):'No ID'}${x.d.category?` · ${esc(x.d.category)}`:''}${x.d.subcategory?` · ${esc(x.d.subcategory)}`:''}</div></div><div class="vote-count">${x.count}<small>votes</small></div></article>`).join('')}
 function render(){renderStats();renderControls(); if(activeTab==='ideas')renderIdeas(); else if(activeTab==='vote')renderVote(); else renderResults()}
