@@ -1,118 +1,85 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
-<title>Ideaspace</title>
-<style>
-:root{
-  --canvas:#f2f5fb;--surface:#fff;--ink:#16233b;--soft:#5a6b85;--faint:#8c99b0;--line:#e2e8f4;
-  --primary:#2f6bed;--primary2:#2257cf;--spark:#ffc53d;--spark2:#f2a50c;--good:#1fa971;--warn:#f59e0b;--done:#64748b;
-  --radius:22px;--shadow:0 16px 36px -22px rgba(22,35,59,.5);--root:17px;
+{
+  "defaultProject": "MF",
+  "projects": [
+    {
+      "id": "MF",
+      "name": "MTR Feedback: What's on your mind?",
+      "question": "MTR Feedback",
+      "ideaFormUrl": "https://forms.gle/7JTXjZRnkW78pP4z7",
+      "ideasCsvUrl": "https://docs.google.com/spreadsheets/d/e/2PACX-1vSh-S9rsiyUW1up-_0XzwqUej6vV8-uHl_bXDSyUiXJpVeyyKAapeD7MjnFWdLnh1DRmiIl54sbJ3xa/pub?output=csv",
+      "voteFormUrl": "https://docs.google.com/spreadsheets/d/e/2PACX-1vSv44aLcCmW8q2K2ayPeGF2Iu9pUsCC2SWfbDNyHDOnxh7dpKNvrr8sF9jsTqLADi7-WcLpERaIQhAg/pub?output=csv",
+      "votesCsvUrl": "https://docs.google.com/forms/d/e/1FAIpQLSd89WR89EBQu3WI5zdk3doKkEfBCeIvLs8brXdV03tjIfGYMQ/viewform?usp=pp_url&entry.1344413353=%7BideaId%7D&entry.19912760=%7Bproject%7D&entry.211848363=%7BideaText%7D&entry.70324964=Table+5&entry.1534972367=Programme+management&entry.1175862118=Financial+savings",
+      "refreshSeconds": 30
+    },
+    {
+      "id": "RM",
+      "name": "Resource Mobilization",
+      "question": "Resource Mobilization: How are you going to mobilize yourselves with this new strategy?",
+      "ideaFormUrl": "https://docs.google.com/forms/d/e/1FAIpQLSdhQjaBN2IqONjBpmLyOi6Q39VxIYc-uQ2ArgASAMmxGu9G1A/viewform?fbzx=5781501051050625629",
+      "ideasCsvUrl": "https://docs.google.com/spreadsheets/d/e/2PACX-1vRVJKAaduPFwok5P-Jh6Tmvzr2Tuh6vEaaWweqgGasrqcw_hgrAUxZxUvkzpDpnRA6QWxZR6Mh0ijzx/pub?output=csv",
+      "voteFormUrl": "PASTE_PREFILLED_VOTE_FORM_LINK_HERE",
+      "votesCsvUrl": "PASTE_PUBLISHED_VOTES_CSV_LINK_HERE",
+      "refreshSeconds": 30
+    },
+    {
+      "id": "EE",
+      "name": "Efficiency and Effectiveness",
+      "question": "Efficiency and Effectiveness Suggestions",
+      "ideaFormUrl": "https://forms.gle/EQqs5pnjWtAcLyA26",
+      "ideasCsvUrl": "https://docs.google.com/spreadsheets/d/e/2PACX-1vTcgnyph1FVLWZVyA3nf9PHyyqgcHx-FfC2oh8HEm5fsnRDtLNLC31aiV3mx4DApv0eacxykMxkOeAG/pub?output=csv",
+      "voteFormUrl": "https://docs.google.com/forms/d/e/1FAIpQLSd89WR89EBQu3WI5zdk3doKkEfBCeIvLs8brXdV03tjIfGYMQ/viewform?usp=header",
+      "votesCsvUrl": "https://docs.google.com/spreadsheets/d/e/2PACX-1vSv44aLcCmW8q2K2ayPeGF2Iu9pUsCC2SWfbDNyHDOnxh7dpKNvrr8sF9jsTqLADi7-WcLpERaIQhAg/pub?output=csv",
+      "refreshSeconds": 30
+    },
+    {
+      "id": "op",
+      "name": "Oversight and risk management",
+      "question": "Oversight and risk management: What's on your mind?",
+      "ideaFormUrl": "https://forms.gle/oKDK964bsovgAQWF7",
+      "ideasCsvUrl": "https://docs.google.com/spreadsheets/d/e/2PACX-1vRKKSNnYohMOk2VxrGDlRCpR6yuuCCDI4LZnzFuC85LeNUSrturA4-B2sDUNWjgwjG-NAUwUOyubROz/pub?output=csv",
+      "voteFormUrl": "PASTE_PREFILLED_VOTE_FORM_LINK_HERE",
+      "votesCsvUrl": "PASTE_PUBLISHED_VOTES_CSV_LINK_HERE",
+      "refreshSeconds": 30
+    },
+    {
+      "id": "stn",
+      "name": "Progress in advancing children’s rights & evolving landscape",
+      "question": "What do these trends mean for the rest of CPC9, and how should we adapt to maintain momentum and sustain results for children?",
+      "ideaFormUrl": "https://docs.google.com/forms/d/e/1FAIpQLSfCqe3WGF2_MyuibnohrGZGDBeASJhX-7oIecyVABl_xPWk5g/viewform?usp=header",
+      "ideasCsvUrl": "https://docs.google.com/spreadsheets/d/e/2PACX-1vRcbFWUND0NHdDkG6WEC0VmSs7ZqrC210gJy2U6uW-qQPgN2iemMziirocNK1Xfr_b5ojVHxbakwwqK/pub?output=csv",
+      "voteFormUrl": "PASTE_PREFILLED_VOTE_FORM_LINK_HERE",
+      "votesCsvUrl": "PASTE_PUBLISHED_VOTES_CSV_LINK_HERE",
+      "refreshSeconds": 30
+    },
+    {
+      "id": "prg",
+      "name": "From Shifts to Results: Taking Stock, Learning, and Accelerating Progress",
+      "question": "From Shifts to Results: What's on your mind?",
+      "ideaFormUrl": "https://docs.google.com/forms/d/e/1FAIpQLSfdjuD1FO5VfpHB8mxneCsya0400Jo5k5FablkBF-q7ls6bNw/viewform?usp=publish-editor",
+      "ideasCsvUrl": "https://docs.google.com/spreadsheets/d/e/2PACX-1vQhLbX24cAVR9sLctsnYn0afMGkBKqbD8jQFo2YOGTEspbTpElqL2nyI-CqoYFD9ybojq_h0eLH21SL/pub?output=csv",
+      "voteFormUrl": "PASTE_PREFILLED_VOTE_FORM_LINK_HERE",
+      "votesCsvUrl": "PASTE_PUBLISHED_VOTES_CSV_LINK_HERE",
+      "refreshSeconds": 30
+    },
+    {
+      "id": "pc",
+      "name": "Office culture and staff welfare",
+      "question": "Office culture and staff welfare: What's on your mind?",
+      "ideaFormUrl": "https://docs.google.com/forms/d/e/1FAIpQLSfjPvC2q9DeCMVY0hEyj8tTCROJ5WALyB6wDyfRpRXsqzcejQ/viewform?usp=publish-editor",
+      "ideasCsvUrl": "https://docs.google.com/spreadsheets/d/e/2PACX-1vTQy6_YT-8hHfZDI1ZejjJWQRc9M61LlpIIo-KUhFtZj6SxL7iSlKNnWLtvbVmFPuMPQ8AJzbABktZ7/pub?output=csv",
+      "voteFormUrl": "PASTE_PREFILLED_VOTE_FORM_LINK_HERE",
+      "votesCsvUrl": "PASTE_PUBLISHED_VOTES_CSV_LINK_HERE",
+      "refreshSeconds": 30
+    },
+    {
+      "id": "cb",
+      "name": "Common Back Office",
+      "question": "Common Back Office: What's on your mind?",
+      "ideaFormUrl": "https://docs.google.com/forms/d/e/1FAIpQLSfTo8o7Ou8prJhFLr4bqnhuyQHggdXu4vCfRnRt7WoYegD8TQ/viewform?usp=publish-editor",
+      "ideasCsvUrl": "https://docs.google.com/spreadsheets/d/e/2PACX-1vReYwYROriT4d2cu0gdoNh-fy_Cw_6qjrpO1ZLwI_ddUR-WyNaAWefMqQewB_O-n_FaXmy2tCPbXbX4/pub?output=csv",
+      "voteFormUrl": "PASTE_PREFILLED_VOTE_FORM_LINK_HERE",
+      "votesCsvUrl": "PASTE_PUBLISHED_VOTES_CSV_LINK_HERE",
+      "refreshSeconds": 30
+    }
+  ]
 }
-*{box-sizing:border-box}
-[hidden]{display:none!important}
-html{font-size:var(--root)}
-body{margin:0;font-family:Inter,system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;color:var(--ink);background:radial-gradient(120% 60% at 50% -10%,#dde8ff 0%,rgba(221,232,255,0) 60%),var(--canvas);min-height:100dvh}
-button,select,input{font:inherit}.app{max-width:1180px;margin:0 auto;min-height:100dvh;padding:16px 22px 28px;display:flex;flex-direction:column;gap:10px}
-.topbar{display:flex;align-items:center;justify-content:space-between;gap:12px;position:sticky;top:0;z-index:10;padding:8px 0;background:linear-gradient(var(--canvas),rgba(242,245,251,.86));backdrop-filter:blur(8px)}
-.brand{display:flex;align-items:center;gap:10px;font-family:Nunito,Inter,sans-serif;font-weight:850;font-size:1.18rem;white-space:nowrap}.spark{width:32px;height:32px;border-radius:10px;background:linear-gradient(160deg,var(--spark),var(--spark2));display:grid;place-items:center;box-shadow:0 8px 18px -9px var(--spark2)}
-.top-actions{display:flex;align-items:center;gap:8px}.submit{border:none;border-radius:14px;background:linear-gradient(160deg,var(--primary),var(--primary2));color:#fff;font-weight:850;padding:12px 16px;cursor:pointer;box-shadow:0 12px 24px -15px var(--primary)}
-.iconbtn{border:1px solid var(--line);background:#fff;color:var(--soft);width:44px;height:44px;border-radius:13px;display:grid;place-items:center;cursor:pointer}.iconbtn:hover{color:var(--ink)}
-.project-row{display:flex;align-items:center;gap:10px;flex-wrap:wrap}.project-select{border:1px solid var(--line);background:#fff;border-radius:13px;padding:10px 36px 10px 12px;color:var(--ink);font-weight:700;max-width:100%}.project-label{font-size:.78rem;color:var(--soft);font-weight:700;text-transform:uppercase;letter-spacing:.08em}
-.question{font-family:Nunito,Inter,sans-serif;font-size:1.72rem;line-height:1.16;letter-spacing:-.02em;margin:4px 0 2px;max-width:980px}.lead{display:block;color:var(--spark2);font-size:.74rem;font-weight:800;letter-spacing:.12em;text-transform:uppercase;margin-bottom:5px}
-.stats{display:flex;gap:8px;flex-wrap:wrap}.stat{background:#fff;border:1px solid var(--line);border-radius:13px;padding:8px 12px;display:flex;gap:7px;align-items:center;box-shadow:0 6px 18px -14px rgba(22,35,59,.35)}.stat b{font-family:Nunito,Inter,sans-serif}.stat span{font-size:.82rem;color:var(--soft)}
-.tabs{display:flex;gap:6px;background:#fff;border:1px solid var(--line);border-radius:16px;padding:5px;align-self:flex-start;flex-wrap:wrap}.tabs button{border:none;background:transparent;border-radius:11px;padding:10px 14px;font-weight:850;color:var(--soft);cursor:pointer}.tabs button[aria-selected=true]{background:color-mix(in srgb,var(--primary) 10%,#fff);color:var(--primary)}
-.controls{display:flex;gap:8px;flex-wrap:wrap}.controls select{border:1px solid var(--line);background:#fff;border-radius:14px;padding:10px 12px;font-weight:700;color:var(--ink);min-width:150px}.controls .refresh{border:1px solid var(--line);background:#fff;border-radius:14px;padding:10px 13px;font-weight:800;cursor:pointer;color:var(--soft)}
-.board{flex:1;min-height:0}.cards{display:flex;flex-direction:column;align-items:center}.deck{position:relative;width:100%;max-width:620px;min-height:380px}.card{position:absolute;inset:0;background:#fff;border:1px solid var(--line);border-radius:var(--radius);box-shadow:var(--shadow);padding:22px;display:flex;flex-direction:column;gap:10px}.card .text{font-family:Nunito,Inter,sans-serif;font-weight:850;font-size:1.45rem;line-height:1.26;overflow:auto;min-height:0;flex:1;white-space:pre-wrap;scrollbar-width:thin}.card .text.long{font-size:1.16rem}.card .text.vlong{font-size:1rem}.meta{display:flex;gap:8px;flex-wrap:wrap;align-items:center;color:var(--soft);font-size:.9rem;font-weight:650}.chip{display:inline-flex;align-items:center;gap:6px;border-radius:999px;padding:5px 10px;font-size:.76rem;font-weight:850;border:1px solid color-mix(in srgb,var(--c,#2f6bed) 26%,#fff);background:color-mix(in srgb,var(--c,#2f6bed) 12%,#fff);color:var(--c,#2f6bed)}.dot{width:7px;height:7px;border-radius:50%;background:currentColor}.feat{--c:#f2a50c}.status{--c:#64748b}.status.shortlisted{--c:#8b5cf6}.status.action{--c:#f59e0b}.status.done{--c:#1fa971}.votes{--c:#2f6bed}
-.card-top{display:flex;justify-content:space-between;gap:8px;align-items:flex-start}.tagrow{display:flex;gap:8px;flex-wrap:wrap}.statusbtn,.votebtn{border:1px solid var(--line);background:#fff;border-radius:12px;padding:8px 11px;font-weight:850;cursor:pointer;color:var(--soft)}.votebtn{color:#fff;background:var(--primary);border-color:var(--primary)}
-.nav{display:flex;align-items:center;gap:16px;margin:16px 0 4px}.nav button{width:52px;height:52px;border-radius:50%;border:1px solid var(--line);background:#fff;font-size:1.6rem;cursor:pointer}.counter{font-family:Nunito,Inter,sans-serif;font-weight:850;min-width:92px;text-align:center}.counter small{display:block;font-family:Inter,sans-serif;color:var(--faint);font-weight:500;font-size:.72rem}
-.list,.grid,.vote-list,.results-list{display:grid;gap:12px}.grid{grid-template-columns:repeat(auto-fill,minmax(260px,1fr))}.item{background:#fff;border:1px solid var(--line);border-radius:18px;padding:16px;box-shadow:0 8px 22px -18px rgba(22,35,59,.4);display:flex;flex-direction:column;gap:9px}.item .text{font-family:Nunito,Inter,sans-serif;font-weight:850;font-size:1.06rem;line-height:1.3;white-space:pre-wrap}.item .actions{display:flex;gap:8px;flex-wrap:wrap;margin-top:auto}.result-rank{font-family:Nunito,Inter,sans-serif;font-size:1.35rem;font-weight:900;color:var(--primary);min-width:52px}.result-row{display:grid;grid-template-columns:auto 1fr auto;gap:12px;align-items:start}.vote-count{font-family:Nunito,Inter,sans-serif;font-size:1.4rem;font-weight:900;color:var(--primary);white-space:nowrap}.vote-count small{display:block;font-family:Inter,sans-serif;font-size:.7rem;color:var(--soft);font-weight:700;text-align:right}.empty{background:#fff;border:1px dashed var(--line);border-radius:20px;padding:36px 18px;text-align:center;color:var(--soft);max-width:680px;margin:20px auto}.empty h2{font-family:Nunito,Inter,sans-serif;color:var(--ink);margin:0 0 6px}.empty p{margin:0;line-height:1.5}.last{font-size:.78rem;color:var(--faint);margin-left:auto;align-self:center}
-@media(max-width:650px){.app{padding:12px 14px 24px}.topbar{align-items:flex-start}.brand{font-size:1rem}.submit{padding:10px 12px}.question{font-size:1.45rem}.deck{min-height:430px}.card .text{font-size:1.25rem}.result-row{grid-template-columns:1fr}.vote-count small{text-align:left}.last{margin-left:0}}
-</style>
-<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Nunito:wght@700;800;900&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-</head>
-<body>
-<div class="app">
-  <header class="topbar">
-    <div class="brand"><span class="spark">💡</span><span>Ideaspace</span></div>
-    <div class="top-actions"><button class="submit" id="submitBtn">Submit</button><button class="iconbtn" id="copyLink" title="Copy project link">🔗</button></div>
-  </header>
-  <div class="project-row"><span class="project-label">Project</span><select id="projectSelect" class="project-select"></select><span class="last" id="lastUpdated"></span></div>
-  <h1 class="question"><span class="lead">Today's question</span><span id="questionText">Loading...</span></h1>
-  <div class="stats" id="stats"></div>
-  <nav class="tabs" id="tabs" aria-label="Main tabs"><button data-tab="ideas" aria-selected="true">Ideas</button><button data-tab="vote">Vote</button><button data-tab="results">Results</button></nav>
-  <div class="controls" id="controls">
-    <select id="sortSel"><option value="newest">All entries</option><option value="featured">Featured only</option><option value="votes">Most voted</option><option value="random">Surprise me</option></select>
-    <select id="viewSel"><option value="cards">Cards</option><option value="list">List</option><option value="grid">Grid</option></select>
-    <select id="catSel"><option value="all">All categories</option></select>
-    <select id="subcatSel" hidden><option value="all">All subcategories</option></select>
-    <select id="statusSel"><option value="all">All statuses</option><option value="open">Open</option><option value="shortlisted">Shortlisted</option><option value="action">Action item</option><option value="done">Done</option></select>
-    <button class="refresh" id="refreshBtn">Refresh</button>
-  </div>
-  <main class="board" id="board"></main>
-</div>
-<script>
-'use strict';
-const STORE='ideaspace_fresh_v1';
-let CONFIG={}, PROJECTS=[], project=null, ideas=[], votes=[], view=[], cats=[], subcats=[], idx=0, activeTab='ideas', timer=null, loading=false;
-const $=id=>document.getElementById(id);
-const esc=s=>String(s??'').replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
-const clean=s=>String(s??'').trim();
-const lower=s=>clean(s).toLowerCase();
-const isPlaceholder=s=>!s||/PASTE_|YOUR_|HERE/i.test(s);
-function cacheBust(url){ if(!url||isPlaceholder(url)) return ''; return url+(url.includes('?')?'&':'?')+'_cb='+Date.now(); }
-function parseCSV(text){let rows=[],row=[],field='',inq=false;for(let i=0;i<text.length;i++){let c=text[i];if(inq){if(c=='"'){if(text[i+1]=='"'){field+='"';i++}else inq=false}else field+=c}else{if(c=='"')inq=true;else if(c==','){row.push(field);field=''}else if(c=='\n'){row.push(field);rows.push(row);row=[];field=''}else if(c=='\r'){}else field+=c}} if(field||row.length){row.push(field);rows.push(row)} if(!rows.length)return[];let head=rows.shift().map(h=>clean(h));return rows.filter(r=>r.some(v=>clean(v))).map(r=>{let o={};head.forEach((h,i)=>o[h]=r[i]??'');return o})}
-function pick(row,names){let m={};Object.keys(row).forEach(k=>m[lower(k)]=row[k]);for(const n of names){if(m[lower(n)]!=null&&clean(m[lower(n)])!=='')return clean(m[lower(n)])}return''}
-function truthy(v){return ['y','yes','true','1','x','✓','featured'].includes(lower(v))}
-function ideaKey(d){return d.ideaId?('id:'+lower(d.ideaId)):('text:'+lower(d.idea))}
-function normalizeIdeas(rows){return rows.map((r,i)=>{let idea=pick(r,['Idea','Idea text','Response','Text','Comment','What is your idea']); if(!idea&&Object.keys(r).length===1) idea=clean(r[Object.keys(r)[0]]); if(!idea)return null;return{row:i+1,ideaId:pick(r,['Idea ID','IdeaID','ID','Response ID'])||'',idea,name:pick(r,['Name','Submitter','Submitted by','Your name']),team:pick(r,['Team','Group','Department','Unit','Office','Section']),category:pick(r,['Category','Tag','Theme','Type']),subcategory:pick(r,['Subcategory','Sub category','Sub-category','Subtheme','Sub-theme']),featured:truthy(pick(r,['Featured','Feature','Star','Highlight','Pin','Spotlight']))}}).filter(Boolean)}
-function normalizeVotes(rows){return rows.map(r=>({ideaId:pick(r,['Idea ID','IdeaID','ID']),idea:pick(r,['Idea','Idea text','Response','Text']),category:pick(r,['Category']),subcategory:pick(r,['Subcategory','Sub category','Sub-category','Subtheme','Sub-theme']),project:pick(r,['Project','Project ID']),voter:pick(r,['Voter name','Name','Voter','Your name']),team:pick(r,['Team','Group','Department','Unit','Office','Section'])})).filter(v=>v.ideaId||v.idea)}
-function voteCounts(){let m={};votes.forEach(v=>{let k=v.ideaId?('id:'+lower(v.ideaId)):('text:'+lower(v.idea));m[k]=(m[k]||0)+1});return m}
-function statusMap(){try{return JSON.parse(localStorage.getItem(STORE+'_status_'+project.id))||{}}catch(e){return{}}}
-function setStatus(key,val){let s=statusMap(); if(val==='open') delete s[key]; else s[key]=val; localStorage.setItem(STORE+'_status_'+project.id,JSON.stringify(s)); render()}
-function getStatus(d){return statusMap()[ideaKey(d)]||'open'}
-function nextStatus(st){return st==='open'?'shortlisted':st==='shortlisted'?'action':st==='action'?'done':'open'}
-function statusLabel(st){return st==='action'?'Action item':st.charAt(0).toUpperCase()+st.slice(1)}
-function facets(){cats=[...new Set(ideas.map(d=>d.category).filter(Boolean))];subcats=[...new Set(ideas.map(d=>d.subcategory).filter(Boolean))]}
-function buildView(){let cat=$('catSel').value||'all', sub=$('subcatSel').value||'all', st=$('statusSel').value||'all', sort=$('sortSel').value;let counts=voteCounts();view=ideas.filter(d=>{if(sort==='featured'&&!d.featured)return false;if(cat!=='all'&&lower(d.category)!==lower(cat))return false;if(sub!=='all'&&lower(d.subcategory)!==lower(sub))return false;if(st!=='all'&&getStatus(d)!==st)return false;return true}); if(sort==='random')view.sort(()=>Math.random()-.5);else if(sort==='votes')view.sort((a,b)=>(counts[ideaKey(b)]||0)-(counts[ideaKey(a)]||0));else view.reverse(); if(idx>=view.length)idx=0}
-async function fetchText(url){let r=await fetch(cacheBust(url),{cache:'no-store'});if(!r.ok)throw Error(r.status);return await r.text()}
-async function refreshData(initial=false){if(loading)return; loading=true; try{let ideaUrl=project.ideasCsvUrl; if(!isPlaceholder(ideaUrl)){let t=await fetchText(ideaUrl); let parsed=normalizeIdeas(parseCSV(t)); if(parsed.length||initial) ideas=parsed} if(project.votesCsvUrl&&!isPlaceholder(project.votesCsvUrl)){try{let vt=await fetchText(project.votesCsvUrl); votes=normalizeVotes(parseCSV(vt))}catch(e){/* keep old votes */}} facets(); render(); $('lastUpdated').textContent='Updated '+new Date().toLocaleTimeString([], {hour:'2-digit',minute:'2-digit',second:'2-digit'});}catch(e){ if(initial){ideas=[]; render()} }finally{loading=false}}
-function renderStats(){let people={};ideas.forEach(d=>{if(d.name)people[lower(d.name)]=1});let counts=voteCounts();let totalVotes=Object.values(counts).reduce((a,b)=>a+b,0);$('stats').innerHTML=`<div class="stat"><b>💡 ${ideas.length}</b><span>${ideas.length===1?'idea':'ideas'}</span></div>${Object.keys(people).length?`<div class="stat"><b>🙋 ${Object.keys(people).length}</b><span>people</span></div>`:''}${cats.length?`<div class="stat"><b>🏷️ ${cats.length}</b><span>categories</span></div>`:''}<div class="stat"><b>🗳️ ${totalVotes}</b><span>votes</span></div>`}
-function renderControls(){let cval=$('catSel').value||'all', sval=$('subcatSel').value||'all';$('catSel').innerHTML='<option value="all">All categories</option>'+cats.map(c=>`<option value="${esc(c)}">${esc(c)}</option>`).join('');$('catSel').value=cats.some(c=>lower(c)===lower(cval))?cval:'all';$('subcatSel').hidden=!subcats.length;$('subcatSel').innerHTML='<option value="all">All subcategories</option>'+subcats.map(c=>`<option value="${esc(c)}">${esc(c)}</option>`).join('');$('subcatSel').value=subcats.some(c=>lower(c)===lower(sval))?sval:'all';$('viewSel').hidden=activeTab!=='ideas';$('sortSel').hidden=activeTab==='results';$('catSel').hidden=activeTab==='results';$('subcatSel').hidden=activeTab==='results'||!subcats.length;$('statusSel').hidden=activeTab!=='ideas'}
-function chips(d, count){let st=getStatus(d);return `<div class="tagrow">${d.featured?'<span class="chip feat"><span class="dot"></span>Featured</span>':''}${d.category?`<span class="chip"><span class="dot"></span>${esc(d.category)}</span>`:''}${d.subcategory?`<span class="chip" style="--c:#14b8a6"><span class="dot"></span>${esc(d.subcategory)}</span>`:''}<span class="chip status ${st}"><span class="dot"></span>${statusLabel(st)}</span>${count?`<span class="chip votes"><span class="dot"></span>${count} vote${count===1?'':'s'}</span>`:''}</div>`}
-function lenCls(t){return t.length>220?'vlong':t.length>115?'long':''}
-function itemHTML(d, mode='idea'){let count=voteCounts()[ideaKey(d)]||0;let meta=`<div class="meta">${d.name?esc(d.name):'Anonymous'}${d.team?` · ${esc(d.team)}`:''}${d.ideaId?` · ${esc(d.ideaId)}`:''}</div>`;let actions=mode==='vote'?`<button class="votebtn" data-vote="${esc(ideaKey(d))}">Vote</button>`:`<button class="statusbtn" data-status="${esc(ideaKey(d))}">${statusLabel(nextStatus(getStatus(d)))}</button>`;return `<article class="item"><div class="card-top">${chips(d,count)}</div><div class="text">${esc(d.idea)}</div>${meta}<div class="actions">${actions}</div></article>`}
-function renderIdeas(){buildView();let mode=$('viewSel').value; if(!view.length){$('board').innerHTML=`<div class="empty"><h2>No ideas to show</h2><p>Try another filter, or check that the published ideas CSV has an Idea column.</p></div>`;return} if(mode==='cards'){let d=view[idx], count=voteCounts()[ideaKey(d)]||0;$('board').className='board cards';$('board').innerHTML=`<div class="deck"><article class="card"><div class="card-top">${chips(d,count)}<button class="statusbtn" data-status="${esc(ideaKey(d))}">${statusLabel(nextStatus(getStatus(d)))}</button></div><div class="text ${lenCls(d.idea)}">${esc(d.idea)}</div><div class="meta">${d.name?esc(d.name):'Anonymous'}${d.team?` · ${esc(d.team)}`:''}${d.ideaId?` · ${esc(d.ideaId)}`:''}</div></article></div><div class="nav"><button id="prevBtn">‹</button><div class="counter">${idx+1} / ${view.length}<small>cards</small></div><button id="nextBtn">›</button></div>`;$('prevBtn').onclick=()=>{if(idx>0){idx--;renderIdeas()}};$('nextBtn').onclick=()=>{if(idx<view.length-1){idx++;renderIdeas()}}} else {$('board').className='board '+mode;$('board').innerHTML=view.map(d=>itemHTML(d,'idea')).join('')}}
-function makeVoteUrl(d){
-  let url=project.voteFormUrl||project.votesFormUrl||'';
-  if(isPlaceholder(url))return'';
-  let pairs={
-    ideaId:d.ideaId||'',
-    ideaText:d.idea||'',
-    idea:d.idea||'',
-    category:d.category||'',
-    subcategory:d.subcategory||'',
-    project:project.id||'',
-    projectName:project.name||project.id||''
-  };
-  Object.keys(pairs).forEach(k=>{
-    let raw='{'+k+'}';
-    let val=encodeURIComponent(pairs[k]);
-    // Google Forms prefilled links usually URL-encode the braces, so support both forms.
-    url=url.replaceAll(raw,val)
-           .replaceAll(encodeURIComponent(raw),val)
-           .replaceAll('%7B'+k+'%7D',val)
-           .replaceAll('%7b'+k+'%7d',val);
-  });
-  return url;
-}
-function renderVote(){buildView(); if(!view.length){$('board').className='board';$('board').innerHTML='<div class="empty"><h2>No ideas available for voting</h2><p>The Vote tab uses the same ideas CSV as the Ideas tab.</p></div>';return}$('board').className='board vote-list';$('board').innerHTML=view.map(d=>itemHTML(d,'vote')).join('')}
-function renderResults(){let counts=voteCounts();let rows=ideas.map(d=>({d,count:counts[ideaKey(d)]||0})).filter(x=>x.count>0).sort((a,b)=>b.count-a.count); if(!project.votesCsvUrl||isPlaceholder(project.votesCsvUrl)){$('board').className='board';$('board').innerHTML='<div class="empty"><h2>Results not set up yet</h2><p>Add a published votes CSV link in config.json as votesCsvUrl.</p></div>';return} if(!rows.length){$('board').className='board';$('board').innerHTML='<div class="empty"><h2>No votes yet</h2><p>Votes will appear here after the voting form receives responses and the votes CSV publishes.</p></div>';return}$('board').className='board results-list';$('board').innerHTML=rows.map((x,i)=>`<article class="item result-row"><div class="result-rank">#${i+1}</div><div><div class="text">${esc(x.d.idea)}</div>${chips(x.d,x.count)}<div class="meta">${x.d.ideaId?esc(x.d.ideaId):'No ID'}${x.d.category?` · ${esc(x.d.category)}`:''}${x.d.subcategory?` · ${esc(x.d.subcategory)}`:''}</div></div><div class="vote-count">${x.count}<small>votes</small></div></article>`).join('')}
-function render(){renderStats();renderControls(); if(activeTab==='ideas')renderIdeas(); else if(activeTab==='vote')renderVote(); else renderResults()}
-function selectProject(id){let p=PROJECTS.find(x=>String(x.id)===String(id))||PROJECTS.find(x=>String(x.id)===String(CONFIG.defaultProject))||PROJECTS[0]; project=p; $('projectSelect').value=p.id; $('questionText').textContent=p.question||p.name||p.id; document.title=(p.name?p.name+' · ':'')+'Ideaspace'; ideas=[]; votes=[]; idx=0; clearInterval(timer); refreshData(true); let secs=Math.max(10,Number(p.refreshSeconds||30)); timer=setInterval(()=>refreshData(false),secs*1000)}
-async function init(){try{let r=await fetch('config.json?cb='+Date.now(),{cache:'no-store'});CONFIG=await r.json()}catch(e){CONFIG={projects:[]}} PROJECTS=CONFIG.projects||[]; if(!PROJECTS.length){$('board').innerHTML='<div class="empty"><h2>No projects found</h2><p>Check config.json.</p></div>';return} $('projectSelect').innerHTML=PROJECTS.map(p=>`<option value="${esc(p.id)}">${esc(p.name||p.id)}</option>`).join('');let urlp=new URLSearchParams(location.search).get('project');selectProject(urlp||CONFIG.defaultProject);$('projectSelect').onchange=()=>{let id=$('projectSelect').value; history.replaceState(null,'','?project='+encodeURIComponent(id)); selectProject(id)};document.querySelectorAll('#tabs button').forEach(b=>b.onclick=()=>{activeTab=b.dataset.tab;document.querySelectorAll('#tabs button').forEach(x=>x.setAttribute('aria-selected',x===b?'true':'false'));render()});['sortSel','viewSel','catSel','subcatSel','statusSel'].forEach(id=>$(id).onchange=()=>{idx=0;render()});$('refreshBtn').onclick=()=>refreshData(false);$('submitBtn').onclick=()=>{let u=project.ideaFormUrl||project.formUrl; if(u&&!isPlaceholder(u))open(u,'_blank','noopener'); else alert('No idea form link set for this project.');};$('copyLink').onclick=async()=>{let u=location.origin+location.pathname+'?project='+encodeURIComponent(project.id);try{await navigator.clipboard.writeText(u);$('copyLink').textContent='✓';setTimeout(()=>$('copyLink').textContent='🔗',1200)}catch(e){prompt('Copy project link:',u)}};document.addEventListener('click',e=>{let sb=e.target.closest('[data-status]'); if(sb){let d=ideas.find(x=>ideaKey(x)===sb.dataset.status); if(d)setStatus(ideaKey(d),nextStatus(getStatus(d)))} let vb=e.target.closest('[data-vote]'); if(vb){let d=ideas.find(x=>ideaKey(x)===vb.dataset.vote); let u=d&&makeVoteUrl(d); if(u)open(u,'_blank','noopener'); else alert('Voting form is not set up yet for this project. Add voteFormUrl in config.json.')}});document.addEventListener('visibilitychange',()=>{if(!document.hidden)refreshData(false)})}
-document.addEventListener('DOMContentLoaded',init);
-</script>
-</body>
-</html>
